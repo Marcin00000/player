@@ -10,7 +10,6 @@ public class PlayerHuman extends Player{
         }
 
         public int guess(){
-//            System.out.println("Podaj liczbę: ");
             return scanner.nextInt();
         }
 }
