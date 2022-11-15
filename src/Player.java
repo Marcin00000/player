@@ -22,5 +22,4 @@ public abstract class Player {
 
     public abstract int guess();
 }
-//"^[a-zA-Z0-9\-_\.]{3,}$"g
 // regex 101
