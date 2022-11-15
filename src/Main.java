@@ -34,3 +34,4 @@ public class Main {
             while (guess!=b);
         }
 }
+// 123 test
