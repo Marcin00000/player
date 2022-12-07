@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -7,12 +6,11 @@ public class Game {
 
     private Player player;
     private List<Player> players = new ArrayList<>();
-    Random rd = new Random();
-
+    private final Random rd = new Random();
 
     public void addPlayer(Player player) {
-        if (nameExists(player.getImie())){
-            player.setName(player.getImie() + rd.nextInt(9));
+        if (nameExists(player.getName())){
+            player.setName(player.getName() + rd.nextInt(9));
             addPlayer(player);
         }
         else players.add(player);
@@ -20,7 +18,7 @@ public class Game {
 
     private boolean nameExists(String name) {
         for (Player player : players)
-            if (player.getImie().equals(name)) {
+            if (player.getName().equals(name)) {
                 return true;
             }
         return false;
@@ -40,7 +38,7 @@ public class Game {
             System.out.println("Podaj wartość");
             for (Player player : players) {
                 guess = player.guess();
-                System.out.println(player.getImie() + ": " + guess);
+                System.out.println(player.getName() + ": " + guess);
 
                 if (guess == b) {
                     System.out.println("Dobrze, podałeś prwidłową wartość");

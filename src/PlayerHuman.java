@@ -1,15 +1,15 @@
 import java.util.Scanner;
 
 public class PlayerHuman extends Player{
-        private final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
 
-        public PlayerHuman(){}
+    public PlayerHuman(){}
 
-        public PlayerHuman(String name){
-            super(name);
-        }
+    public PlayerHuman(String name){
+        super(name);
+    }
 
-        public int guess(){
-            return scanner.nextInt();
-        }
+    public int guess(){
+        return scanner.nextInt();
+    }
 }
