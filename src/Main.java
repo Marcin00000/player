@@ -1,9 +1,21 @@
 public class Main {
     public static void main(String[] args) {
+
+
         Game game = new Game();
         game.addPlayer(new PlayerComp("xyz"));
-        game.addPlayer(new PlayerComp("xyz"));
+        game.addPlayer(new PlayerComp("Stefan"));
+        game.addPlayer(new PlayerComp("Marian"));
+
+        game.printPlayers();
+//        game.removePlayer("xyz");
+        game.printPlayers();
+
+        for (int i=0;i<10;i++){
         game.play();
+        }
+
+        game.printStats();
 
 //        List<String> list = new ArrayList();
 //        list.add("cos");
