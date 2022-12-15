@@ -1,5 +1,8 @@
+import players.Player;
+import statistics.NullStatistics;
+import statistics.Statistics;
+
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
@@ -8,9 +11,20 @@ public class Game {
     private Player player;
     private List<Player> players = new ArrayList<>();
 
-    private Statistics statistics = new Statistics();
+    private Statistics statistics;
 
     private final Random rd = new Random();
+
+    public Game(){
+        this(null);
+    }
+
+    public Game(Statistics statistics) {
+        if (statistics!=null)
+            this.statistics = statistics;
+        else
+            this.statistics = new NullStatistics();
+    }
 
     public void addPlayer(Player player) {
         if (nameExists(player.getName())){
@@ -34,12 +48,12 @@ public class Game {
     }
 
     public void removePlayer(String name){
-//        for (Player player : players)
+//        for (players.Player player : players)
 //            if (player.getName().equals(name)) {
 //                players.remove(player);
 //                    break;
 //            }
-//        for (Iterator<Player> it= players.iterator(); it.hasNext(); ){
+//        for (Iterator<players.Player> it= players.iterator(); it.hasNext(); ){
 //            if (it.next().getName().equals(name)){
 //                it.remove();
 //                break;

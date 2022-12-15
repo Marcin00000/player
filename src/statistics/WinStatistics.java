@@ -1,7 +1,9 @@
+package statistics;
+
 import java.util.HashMap;
 import java.util.Map;
 
-public class Statistics {
+public class WinStatistics implements Statistics {
 
     private Map<String, Integer> stats = new HashMap<>();
 
@@ -19,17 +21,15 @@ public class Statistics {
     }
 
     public void print(){
-        System.out.println("    ||Statystyka||    ");
+        System.out.println("    |*|Statystyka|*|    ");
         for (String i : stats.keySet()) {
-            System.out.println(i +  ";  wynik: " + stats.get(i));
+            System.out.println(i +  ":  wynik: " + stats.get(i));
         }
 
-//        stats.forEach((name score ;>));
+//        stats.forEach((name,score)-> System.out.println(name+": "+score));
     }
 
     public void clear(){
 
     }
-
-
 }
