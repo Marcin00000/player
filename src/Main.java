@@ -1,5 +1,3 @@
-import players.PlayerComp;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -23,7 +21,7 @@ public class Main {
 //        list.add("cos");
 //        list.add("cos2");
 //        list.add("cos3");
-////        list.add(new players.PlayerComp());
+////        list.add(new PlayerComp());
 ////
 ////        System.out.println(list);
 ////
@@ -57,7 +55,7 @@ public class Main {
 //            int guess ;
 //            int b =rd.nextInt(6)+1;
 //
-//            players.Player player = new players.PlayerComp("zzzz");
+//            Player player = new PlayerComp("zzzz");
 //
 ////            try {
 ////                player.setName(null);

@@ -1,7 +1,3 @@
-import players.Player;
-import statistics.NullStatistics;
-import statistics.Statistics;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -48,12 +44,12 @@ public class Game {
     }
 
     public void removePlayer(String name){
-//        for (players.Player player : players)
+//        for (Player player : players)
 //            if (player.getName().equals(name)) {
 //                players.remove(player);
 //                    break;
 //            }
-//        for (Iterator<players.Player> it= players.iterator(); it.hasNext(); ){
+//        for (Iterator<Player> it= players.iterator(); it.hasNext(); ){
 //            if (it.next().getName().equals(name)){
 //                it.remove();
 //                break;
